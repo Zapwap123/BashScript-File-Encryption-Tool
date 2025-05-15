@@ -6,7 +6,6 @@ A secure Bash script for encrypting and decrypting files using a password-based 
 
 - Encrypt and decrypt files with a password
 - Uses AES-256-CBC encryption
-- Applies PBKDF2 for strong key derivation
 
 ## Usage
 
@@ -34,11 +33,6 @@ chmod +x fileEncryptionTool.sh
 ```bash
 ./fileEncryptionTool.sh decrypt <filePath.enc>
 ```
-
-## Security Notes
-
-- Uses `-pbkdf2` and `-iter 100000` with OpenSSL for strong key derivation.
-- For secure deletion, `shred -u` is used. Works best on HDDs; may be unreliable on SSDs.
 
 ## Requirements
 
